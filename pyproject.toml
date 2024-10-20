@@ -15,8 +15,20 @@ web3 = "^7.4.0"
 black = "^24.10.0"
 ruff = "^0.7.0"
 isort = "^5.13.2"
-mypy = "^1.12.1"
+django-stubs = {extras = ["compatible-mypy"], version = "^5.1.0"}
 
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+
+[tool.mypy]
+# Enable type checking of your Django code
+plugins = ["mypy_django_plugin.main"]
+
+[tool.django-stubs]
+# Set the path to your Django settings module (replace with your actual settings module)
+django_settings_module = "bayc_nft_transfer_monitor.settings"
+
+[mypy.plugins.django-stubs]
+ignore_missing_imports = true
