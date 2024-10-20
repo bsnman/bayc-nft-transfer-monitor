@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     # packages
     "rest_framework",
     "web3",
+    "django_rq",
     # apps
     "monitor",
     "web3_client",
@@ -92,6 +93,14 @@ DATABASES = {
         "ENGINE": "django.db.backends.sqlite3",
         "NAME": BASE_DIR / "db.sqlite3",
     }
+}
+
+
+# RQ
+RQ_QUEUES = {
+    "default": {
+        "URL": "redis://localhost:6379/0",  # Use this URL in your Django settings
+    },
 }
 
 
