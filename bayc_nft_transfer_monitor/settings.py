@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     "web3",
     # apps
     "monitor",
+    "web3_client",
 ]
 
 MIDDLEWARE = [
@@ -136,4 +137,5 @@ STATIC_URL = "static/"
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 
-INFURA_API_KEY = env("INFURA_API_KEY")
+INFURA_API_KEY = env.str("INFURA_API_KEY")
+BAYC_CONTRACT_ADDRESS = "0xBC4CA0eda7647A8ab7C2061c2e118a18a936f13D"
