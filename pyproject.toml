@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "bayc-nft-transfer-monitor"
+version = "0.1.0"
+description = ""
+authors = ["Radih P Paraguas Jr <radihjrprgs@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+Django = "^5.1.2"
+web3 = "^7.4.0"
+
+
+[tool.poetry.group.dev.dependencies]
+black = "^24.10.0"
+ruff = "^0.7.0"
+isort = "^5.13.2"
+mypy = "^1.12.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
